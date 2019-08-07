@@ -34,7 +34,7 @@ axios.interceptors.response.use(response=>{
     return response.data
     
 },error=>{
-    // console.log(error)
+    console.log(error)
     // alert(error.message)
     //返回一个pending状态的promise, 中断promise链
     return new Promise(()=>{})

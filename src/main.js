@@ -7,6 +7,10 @@ import App from './App.vue'
 import router from './router'
 import Header from './components/Header/Header.vue'
 import './api'
+
+//全局配置以阻止 vue 在启动时生成生产提示。
+Vue.config.productionTip = false 
+
 //全局注册Header组件
 Vue.component('Header',Header)
 new Vue({
