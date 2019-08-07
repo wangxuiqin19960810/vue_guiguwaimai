@@ -305,7 +305,7 @@
         </ul>
       </div>
     </div>
-      </section>
+  </section>
 </template>
 
 <script type="text/ecmascript-6">
