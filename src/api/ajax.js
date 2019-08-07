@@ -29,9 +29,12 @@ axios.interceptors.request.use(config=>{
 */
 axios.interceptors.response.use(response=>{
     //返回的结果就会交给我们指定的请求响应的回调
+    console.log(response.data)
+    console.log(response)
     return response.data
+    
 },error=>{
-    console.log(error)
+    // console.log(error)
     // alert(error.message)
     //返回一个pending状态的promise, 中断promise链
     return new Promise(()=>{})

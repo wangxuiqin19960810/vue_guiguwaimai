@@ -33,7 +33,6 @@ export const reqShops = ({latitude,longitude})=>ajax({
     }
 })
 
-debugger
 // 测试一下第一个接口
 reqAddress('116.36867','40.10038').then((result)=>{
     console.log('result',result)
