@@ -12,7 +12,10 @@
         <form>
           <div :class="{on:loginWay}">
             <section class="login_message">
-              <input type="tel" maxlength="11" placeholder="手机号" v-model="phone" />
+              <input type="text" maxlength="11" placeholder="手机号" v-model="phone" 
+              v-validate="'required|mobile'" name="phone"
+              />
+              <span style="color:red" v-show=" errors.has('phone')">{{ errors.first('phone') }}</span>
               <button
                 :disabled="!isRightPhone || computeTime >0"
                 class="get_verification"
@@ -64,7 +67,8 @@ export default {
       loginWay: true, // true: 短信登陆, false: 密码登陆
       phone: "", // 手机号
       computeTime: 0, //计时剩余的时间
-      isShowPwd : false //是否显示密码
+      isShowPwd : false, //是否显示密码
+      mobile:'',
     }
   },
   computed: {
