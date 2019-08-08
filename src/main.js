@@ -16,7 +16,8 @@ Vue.config.productionTip = false
 //全局注册Header组件
 Vue.component('Header',Header)
 //全局注册星星组件
-Vue.component('Star',Star)
+
+Vue.component('Star',Star)  
 
 new Vue({
     components:{
