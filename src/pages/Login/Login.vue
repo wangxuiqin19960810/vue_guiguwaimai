@@ -147,6 +147,8 @@ export default {
                 color #ccc
                 font-size 14px
                 background transparent
+                &.right_phone_number
+                  color:black
             .login_verification
               position relative
               margin-top 16px
