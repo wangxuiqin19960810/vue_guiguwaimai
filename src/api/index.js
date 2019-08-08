@@ -19,7 +19,7 @@ export const reqAddress = (longitude,latitude) => ajax({
 2、获取食品分类列表
 */
 
-export const reqCategory = () => ajax.get(BASE + '/index_category')
+export const reqCategorys = () => ajax.get(BASE + '/index_category')
 
 /* 
 3、根据经纬度获取商铺列表
@@ -33,7 +33,3 @@ export const reqShops = ({latitude,longitude})=>ajax({
     }
 })
 
-// 测试一下第一个接口
-reqAddress('116.36867','40.10038').then((result)=>{
-    console.log('result',result)
-})

@@ -12,7 +12,7 @@ import qs from 'qs'//查询字符串解析和字符串化库，增加了一些�
 axios.interceptors.request.use(config=>{
     // 得到请求方式和请求体数据
     const {method,data} = config
-    if(method.toUpperCase()==='POST'&& data instanceof object){
+    if(method.toUpperCase()==='POST'&& data instanceof Object){
         //处理post请求, 将data对象转换成query参数格式字符串
         config.data = qs.stringify(data)
     }
@@ -29,8 +29,8 @@ axios.interceptors.request.use(config=>{
 */
 axios.interceptors.response.use(response=>{
     //返回的结果就会交给我们指定的请求响应的回调
-    console.log(response.data)
-    console.log(response)
+    // console.log(response.data)
+    // console.log(response)
     return response.data
     
 },error=>{
